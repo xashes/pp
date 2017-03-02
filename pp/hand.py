@@ -41,12 +41,18 @@ class Hand:
         return ranks
 
     @property
+    def _suits(self):
+        """
+        Return the suits of the hand
+        """
+        return [s for r, s in self.cards]
+
+    @property
     def _is_flush(self):
         """
         Return True is the hand is flush
         """
-        suits = [s for r, s in self.cards]
-        return len(set(suits)) == 1
+        return len(set(self._suits)) == 1
 
     @property
     def _is_straight(self):
