@@ -4,10 +4,6 @@ Hand object
 
 
 class Hand:
-    """
-    Poker hand object
-    """
-
     def __init__(self, cards):
         "init a poker hand with a list of cards"
         self.cards = cards
